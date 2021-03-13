@@ -1,0 +1,36 @@
+{
+        "manifest_version": 2,
+    
+        "name": "Web Tracker",
+        "short_name": "Web Tracker",
+        "version": "1.0.0",
+        "minimum_chrome_version": "26",
+
+        "description": "Track and limit time your activity in the browser every day.",
+
+        "options_page": "options.html",
+    
+        "icons": {
+            "16": "icons/16x16.png",
+            "32": "icons/32x32.png",
+            "48": "icons/48x48.png",
+            "128": "icons/128x128.png"
+        },
+        "permissions": [
+            "tabs",
+            "activeTab",
+            "storage",
+            "idle",
+            "chrome://favicon/*",
+            "webNavigation",
+            "unlimitedStorage"
+        ],
+        
+        "offline_enabled": true,
+
+        "browser_action": {
+            "default_popup": "index.html",
+            "default_title": "Web Tracker",
+            "default_icon": "icons/48x48.png"
+        }
+}
