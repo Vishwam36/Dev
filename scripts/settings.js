@@ -46,8 +46,6 @@ document.addEventListener('DOMContentLoaded', function () {
     document.getElementById('intervalInactivity').addEventListener('change', function () {
         storage.saveValue(SETTINGS_INTERVAL_INACTIVITY, this.value);
     });
-    $('.clockpicker').clockpicker();
-
     loadSettings();
 });
 
