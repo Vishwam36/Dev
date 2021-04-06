@@ -82,6 +82,7 @@ function loadSettings() {
     storage.getValue(STORAGE_TABS, function (item) {
         let s = item;
     });
+}
 
 function loadVersion() {
     var version = chrome.runtime.getManifest().version;
