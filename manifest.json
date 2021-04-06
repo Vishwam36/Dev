@@ -1,8 +1,8 @@
 {
         "manifest_version": 2,
     
-        "name": "Web Tracker",
-        "short_name": "Web Tracker",
+        "name": "Web Monitor",
+        "short_name": "Web Monitor",
         "version": "1.0.0",
         "minimum_chrome_version": "26",
 
@@ -25,12 +25,23 @@
             "webNavigation",
             "unlimitedStorage"
         ],
-        
+        "optional_permissions": [
+            "notifications"
+          ],
         "offline_enabled": true,
-
+        "background": {
+            "scripts": ["scripts/common.js", 
+                        "scripts/storage.js", 
+                        "scripts/activity.js", 
+                        "scripts/tab.js", 
+                        "scripts/timeInterval.js",
+                        "scripts/background.js",
+                        "scripts/restriction.js"],
+            "persistent": false
+        },
         "browser_action": {
             "default_popup": "index.html",
-            "default_title": "Web Tracker",
+            "default_title": "Web Monitor",
             "default_icon": "icons/48x48.png"
         }
 }
